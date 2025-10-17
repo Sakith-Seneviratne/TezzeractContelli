@@ -1,0 +1,73 @@
+'use client';
+import { styled } from 'styled-components';
+import hero_background from '../../../../public/images/grid_background.png';
+
+export const Wrapper = styled.section`
+  margin-top: 6.25rem;
+`;
+
+export const Inner = styled.div`
+  background: url(${hero_background.src}) no-repeat;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 56rem;
+  margin: 0 auto;
+  text-align: center;
+  background-position: top center;
+  background-size: contain;
+`;
+
+export const Pill = styled.div`
+  display: flex;
+  padding: 0.375rem 0.75rem;
+  justify-content: center;
+  align-items: center;
+  gap: 0.625rem;
+  border-radius: 6.25rem;
+  border: 1px solid var(--emerald);
+  background: rgba(0, 169, 238, 0.1);
+  backdrop-filter: blur(10px);
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 15px rgba(0, 169, 238, 0.15);
+
+  span {
+    color: var(--emerald);
+    font-size: 1rem;
+    font-weight: 500;
+  }
+`;
+
+export const HeroTextContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  padding-bottom: 2rem;
+
+  h1 {
+    font-size: 5rem;
+    font-weight: 400;
+  }
+
+  p {
+    max-width: 41.75rem;
+    color: var(--text-secondary);
+    font-size: 1.5rem;
+    font-weight: 400;
+    margin: 0 auto;
+  }
+
+  @media (max-width: 768px) {
+    gap: 1rem;
+    padding-bottom: 1.5rem;
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 400;
+    }
+
+    p {
+      font-size: 1rem;
+      line-height: 1.5rem;
+    }
+  }
+`;
